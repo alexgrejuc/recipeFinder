@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+
+    <meta charset="utf-8">
+    <title>Recipe Finder</title>
+
+    <!-- Fonts to use -->
+    <link href="https://fonts.googleapis.com/css?family=Basic|Lilita+One" rel="stylesheet">
+
+    <link rel="stylesheet" href="/style.css" media="screen">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.runtime.js" defer></script>
+
+    <script src="/recipeTemplate.js" charset="utf-8" defer></script>
+
+    {{#if genRecipeJS}}
+      <script src="/genRecipe.js" charset="utf-8" defer></script>
+    {{/if}}
+  </head>
+
+  <body>
+    <!--img id="bg" src="/ingredientBackground.jpg"-->
+
+    {{{body}}}
+
+  </body>
+
+</html>

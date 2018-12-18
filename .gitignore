@@ -1,0 +1,7 @@
+*.log
+*.swp
+node_modules
+public/partials.js
+package-lock.json
+addToDB.js
+.idea

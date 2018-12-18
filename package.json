@@ -1,0 +1,36 @@
+{
+  "name": "recipe-finder-cs290-spring18",
+  "version": "1.0.0",
+  "description": "A website which allows users to enter ingredients and find corresponding recipes",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "build": "handlebars views/partials/ -f public/partials.js",
+    "prestart": "npm run build",
+    "predev": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OSU-CS290-Sp18/final-project-final-project-group-6.git"
+  },
+  "keywords": [
+    "recipe"
+  ],
+  "author": "Alex Grejuc, Monica Holliday, Michaela Buchanan, (Donald) Max Harkins",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/OSU-CS290-Sp18/final-project-final-project-group-6/issues"
+  },
+  "homepage": "https://github.com/OSU-CS290-Sp18/final-project-final-project-group-6#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "mongodb": "^3.0.10",
+    "transform": "^1.1.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.5"
+  }
+}

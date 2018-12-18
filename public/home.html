@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Recipe Finder</title>
+
+    <!-- Fonts to use -->
+    <link href="https://fonts.googleapis.com/css?family=Basic|Lilita+One" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.runtime.js"></script>
+    <script src="/partials.js" defer></script>
+    <script src="/index.js" charset="utf-8" defer></script>
+  </head>
+
+  <body id="mainpage-body">
+    <h1 id="title-text" class="site-title">Recipe Finder!</h1>
+
+    <main>
+      <div id="main-search" class="search-bar">
+        <input type="text" class="search-input" autofocus>
+          <div type="text" id="suggested-ingredient" class="search-input">add an ingredient...</div>
+      </div>
+
+      <!--<div id="search-suggest" class="search-bar">
+        <div type="text" id="suggested-ingredient" class="search-input">hello</div>
+      </div>-->
+
+      <div id="mainpage-content">
+        <div id="ingredients-container">
+
+        </div>
+
+        <button type = "button" id="generate-recipes-button"> generate</button>
+      </div>
+
+    </main>
+  </body>
+
+</html>

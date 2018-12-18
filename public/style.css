@@ -1,0 +1,422 @@
+
+html {
+  height: 100%;
+  width: 100%;
+  display: table;
+}
+
+body {
+  font-family: 'Basic', sans-serif;
+  margin: 0px;
+  font-size: 18px;
+  background-color: #93B5C6;
+  height: 100%;
+  /*background-image: url("ingredientBackground.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;*/
+}
+
+header {
+    background-color: #F7D76C;
+    top: 0px;
+    margin: 0px;
+    padding-top: 1px;
+    border-bottom: 3px solid #793345;
+    position: fixed;
+    width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+h1 {
+  font-weight: lighter;
+}
+
+p {
+  margin: 0px;
+}
+
+/*TODO: make the page actually look good and fit with the website theme
+In particular: have a unified color scheme and fonts
+*/
+
+#bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  /* Preserve aspet ratio */
+  min-width: 100%;
+  min-height: 100%;
+}
+
+#mainpage-body{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.site-title{
+  font-size: 100px;
+  font-family: 'Lilita One', cursive;
+  letter-spacing: 4px;
+  color: #CBE86D;
+  margin: 30px;
+  text-align: center;
+
+  text-shadow:
+    -3px -3px 0.2px #793345,
+    3px -3px 0.2px #793345,
+    -3px 3px 0.2px #793345,
+    3px 3px 0.2px #793345;
+}
+
+.site-subtitle{
+  font-size: 60px;
+  font-family: 'Lilita One', cursive;
+  letter-spacing: 4px;
+  color: #CBE86D;
+  margin: 30px;
+  text-align: center;
+
+  white-space: nowrap;
+
+  text-shadow:
+    -2px -2px 0.1px #793345,
+    2px -2px 0.1px #793345,
+    -2px 2px 0.1px #793345,
+    2px 2px 0.1px #793345;
+}
+
+/****** Search bar **************************/
+#main-search{
+  border-radius: 5px;
+  padding: 0px;
+  border: 8px solid #793345;
+  position: relative;
+}
+
+#suggested-ingredient{
+  font-family: 'Basic', sans-serif;
+  font-size: 20px;
+  position: absolute;
+  top: 0;
+  opacity: .2;
+}
+
+.search-input{
+  font-family: 'Basic', sans-serif;
+  font-size: 20px;
+  text-align: center;
+  width: 100%;
+  margin: 0px;
+  padding: 5px 0px;
+  border: 0px;
+}
+
+.search-input::placeholder {
+  font-family: basic;
+  opacity: .2;
+}
+
+
+/*********************************************/
+
+
+#mainpage-content{
+  width: 800px;
+  margin: 0 auto;
+  background-color: #D7816A;
+  border: 8px solid #793345;
+  margin: 30px 0px;
+  border-radius: 5px;
+
+}
+
+#ingredients-container{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 5px;
+}
+
+.mainpage-ingredient{
+  margin: 10px;
+  border-radius: 5px;
+  background-color: white;
+  border: 4px solid #793345;
+  padding: 5px;
+}
+
+.ingredient-name{
+  font-size: 20px;
+  margin: 5px;
+}
+
+.remove-ingredient-button{
+  display: inline-block;
+  color: #793345;
+  background-color: white;
+  border-radius: 12px;
+  height: 22px;
+  width: 22px;
+  border: none;
+}
+
+#num-ingredients-display{
+  width: 100px;
+  height: 100px;
+  display: inline;
+  background-color: #CBE86D;
+}
+
+#generate-recipes-button{
+  background-color: #F7D76C;
+  /* This width is the determining factor for how wide the page looks */
+  width: 780px;
+  margin: 10px;
+  height: 100px;
+  border: 4px solid #793345;
+  border-radius: 5px;
+  font-family: 'Lilita One', cursive;
+  letter-spacing: 0px;
+  font-size: 50px;
+  color: #793345;
+}
+
+#generate-recipes-button:hover{
+    cursor:pointer;
+}
+
+/*
+ *  Here down is for individual recipe page
+ */
+#recipe-details-main {
+  margin-top: 162px;
+}
+
+.recipe-box {
+  width: 60%;
+  margin-left: 20%;
+  margin-bottom: 20px;
+  display: flex;
+  padding: 5px;
+  align-items: center;
+  flex-direction: column;
+  background-color: #D7816A;
+  border: 4px solid #793345;
+  border-radius: 10px;
+}
+
+.recipe-title {
+  font-family: 'Lilita One', cursive;
+  font-weight: normal;
+  font-size: 40px;
+  margin: 4px;
+  color: #793345;
+  letter-spacing: 2px;
+  text-shadow:
+    -2px -2px 0.1px black,
+    2px -2px 0.1px black,
+    -2px 2px 0.1px black,
+    2px 2px 0.1px black;
+}
+
+.recipe-detail-contents {
+  align-self: stretch;
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+.prep-time {
+  font-size: 25px;
+}
+
+.specific-recipe-attribution {
+  align-self: flex-end;
+}
+
+.ingreds-and-time {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  margin: 10px;
+  flex: 1 1 0;
+}
+
+.ingredients {
+  border-radius: 5px;
+  background-color: #a0d9f5;
+  border: 4px solid #793345;
+  padding: 10px;
+}
+
+.directions {
+  margin: 10px;
+  border-radius: 5px;
+  background-color: white;
+  border: 4px solid #793345;
+  padding: 10px;
+  flex: 1.5 1 0;
+}
+
+.prep-time {
+  margin: 20px 0 0 0;
+  text-align: center;
+
+
+  border-radius: 5px;
+  background-color: #F7D76C;
+  border: 4px solid #793345;
+  padding: 10px;
+
+  font-weight: normal;
+  font-family: 'Lilita One', cursive;
+  letter-spacing: 0px;
+  font-size: 20px;
+  color: #793345;
+}
+
+.recipe-details-img img {
+  border: 1px solid #793345;
+  margin: 0px;
+  width: 40vw;
+}
+
+/****** Generated Recipes Page *********************/
+.navbar {
+  background-color: #793345;
+  color: #fff;
+  font-size: 20px;
+  margin: 0;
+  padding: 4px 4px 0px 4px;
+}
+
+.navlist {
+  padding: 0;
+  margin: 0;
+}
+
+.navitem {
+  display:inline-block;
+  margin: 5px 10px;
+  border-radius: 5px;
+  border: 2px solid white;
+}
+
+.ingredient {
+  background-color: #793345;
+  padding: 0px 0px 0px 5px;
+  display: inline-flex;
+  align-items: center;
+
+}
+
+
+.navbar-search {
+  float: right;
+  font-size: 20px;
+  background-color: white;
+}
+
+#navbar-search-button {
+  border: none;
+  background: white;
+  font-family: "Lilita One", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  color: #793345;
+}
+
+#navbar-search-input {
+  font-size: 20px;
+  margin: 0px;
+  padding: 5px;
+  border: 0px;
+}
+
+/* main */
+
+.recipe-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 215px 30px;
+  justify-content: center;
+}
+
+
+.recipe {
+  display: flex;
+  border: 4px solid #793345;
+  margin: 10px;
+  border-radius: 5px;
+  background-color: white;
+  padding: 5px;
+  width: 350px;
+  justify-content: space-between;
+}
+
+.recipe-img img {
+  border: 1px solid #793345;
+  margin: 0px;
+  height: 100px;
+}
+
+.recipe-text:hover{
+    cursor: pointer;
+}
+
+.recipe-text {
+  margin: 0 5px;
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+}
+
+.recipe-time {
+  bottom: 0px;
+  /* Commented out section adds cool border to prep time text
+  background-color: #CBE86D;
+  border: 2px solid #793345;
+  padding: 2px;
+  border-radius: 5px;
+  */
+}
+
+.recipe-x-button {
+  border: 2px solid #793345;
+  width: 28px;
+  height: 28px;
+  border-radius: 5px;
+  background-color: #F7D76C;
+  color: #793345;
+  bottom: 50%;
+}
+
+
+/*****Error Page*****/
+.error-box {
+  background-color: #D7816A;
+  border: 4px solid #793345;
+  border-radius: 10px;
+  margin-top: 162px;
+  text-align: center;
+  width: 60%;
+  margin-left: 20%;
+  margin-bottom: 20px;
+}
