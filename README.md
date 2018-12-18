@@ -8,7 +8,9 @@ Then, by clicking generate, they will be redirected to a new page which has up t
 
 Finally, clicking on a recipe tile on the generated recipes page takes the user to a third page which displays all of the details of the recipe (including attribution).
 
-[Try it out:](https://recipe-finder-osu.herokuapp.com/home.html) (this is an older version w/o all the fixes) 
+[Try it out!](https://recipe-finder-osu.herokuapp.com/home.html) 
+
+Note: the search suggest and user input currently do not align. Also, there is a bug which does not allow a user to type ingredient names after clicking outside the search bar. Both issues will hopefully be fixed soon. 
 
 :spaghetti:       <br>
 :pizza:           <br>
