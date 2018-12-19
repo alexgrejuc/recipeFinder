@@ -115,11 +115,13 @@ In particular: have a unified color scheme and fonts
 .search-input{
   font-family: 'Basic', sans-serif;
   font-size: 20px;
-  text-align: center;
+  text-align: left;
+  text-indent: 10px;
   width: 100%;
   margin: 0px;
   padding: 5px 0px;
   border: 0px;
+  z-index: 1;
 }
 
 .search-input::placeholder {

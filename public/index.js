@@ -120,6 +120,7 @@ searchInput.addEventListener('keyup', function(event){
 	if(event.keyCode === 13){ //13 is the enter key
     searchAddIngredient();
     searchInput.value = "";
+		suggestedIngredient.innerText = "";
   }
 });
 
